@@ -18,7 +18,7 @@ Stata is a good tool for cleaning and manipulating data, regardless of the softw
 
 * [Some useful tips before you get started](https://mdl.library.utoronto.ca/technology/tutorials/cleaning-data-stata#a)
 * [Creating a number of smaller subsets based on research criteria](https://https://mdl.library.utoronto.ca/technology/tutorials/cleaning-data-stata#b)
-* [Dropping observations](https://mdl.library.utoronto.ca/technology/tutorials/cleaning-data-stata#c)
+* [Dropping observations](#dropping-observations)
 * [Dropping variables](https://mdl.library.utoronto.ca/technology/tutorials/cleaning-data-stata#d)
 * [Transforming variables](https://mdl.library.utoronto.ca/technology/tutorials/cleaning-data-stata#e)
 * [Dealing with outliers](https://mdl.library.utoronto.ca/technology/tutorials/cleaning-data-stata#f)
