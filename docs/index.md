@@ -16,18 +16,17 @@ Stata is a good tool for cleaning and manipulating data, regardless of the softw
 
  **Table of Contents**
 
-* [Some useful tips before you get started](https://mdl.library.utoronto.ca/technology/tutorials/cleaning-data-stata#a)
-* [Creating a number of smaller subsets based on research criteria](https://https://mdl.library.utoronto.ca/technology/tutorials/cleaning-data-stata#b)
+* [Some useful tips before you get started](#some-useful-tips-before-you-get-started)
+* [Creating a number of smaller subsets based on research criteria](#creating-a-number-of-smaller-subsets-based-on-research-criteria)
 * [Dropping observations](#dropping-observations)
-* [Dropping variables](https://mdl.library.utoronto.ca/technology/tutorials/cleaning-data-stata#d)
-* [Transforming variables](https://mdl.library.utoronto.ca/technology/tutorials/cleaning-data-stata#e)
-* [Dealing with outliers](https://mdl.library.utoronto.ca/technology/tutorials/cleaning-data-stata#f)
-* [Creating new variables](https://mdl.library.utoronto.ca/technology/tutorials/cleaning-data-stata#g)
-* [Moving variables](https://mdl.library.utoronto.ca/technology/tutorials/cleaning-data-stata#h)
-* [Labelling variables](https://mdl.library.utoronto.ca/technology/tutorials/cleaning-data-stata#i)
-* [Renaming variables](https://mdl.library.utoronto.ca/technology/tutorials/cleaning-data-stata#j)
-* [A few last words](https://mdl.library.utoronto.ca/technology/tutorials/cleaning-data-stata#k)
-
+* [Dropping variables](#dropping-variables)
+* [Transforming variables](#transforming-variables)
+* [Dealing with outliers](#dealing-with-outliers)
+* [Creating new variables](#creating-new-variables)
+* [Moving variables](#moving-variables)
+* [Labelling variables](#labelling-variables)
+* [Renaming variables](#renaming-variables)
+* [A few last words](#a-few-last-words)
  
 
 Cleaning data is a rather broad term that applies to the preliminary manipulations on a dataset prior to analysis. It will very often be the first assignment of a research assistant and is the tedious part of any research project that makes us wish we HAD a research assistant. Stata is a good tool for cleaning and manipulating data, regardless of the software you intend to use for analysis. Your first pass at a dataset may involve any or all of the following:
@@ -44,7 +43,9 @@ Cleaning data is a rather broad term that applies to the preliminary manipulatio
 
 Whether this is your first time cleaning data or you are a seasoned “data monkey”, you might find some useful tips by reading more.
 
-***Some useful tips before you get started[**[1]**](https://data.library.utoronto.ca/cleaning-data-stata#_ftn1 "")***
+***Some useful tips before you get started[[1]](#1)***
+{: #some-useful-tips-before-you-get-started }
+
 
 *Use the Stata help file*. Stata has a built in feature that allows you to access the user manual as well as help files on any given command. Simply type “help” in the command window, followed by the name of the command you need help with and press the Enter key:
 
@@ -52,7 +53,7 @@ Whether this is your first time cleaning data or you are a seasoned “data monk
 
 *Write a do file.* Never clean a dataset by blindly entering commands (or worse, clicking buttons). You want to write the commands in a do-file, and then run it. This way, if you make a mistake, you will not have ruined your entire dataset and you will not need to start again from scratch. This is a general advice that applies to any work you do on Stata. Working from do-files lets other people see what you did if you ever need advice, it makes your work reproducible and it allows you to correct small mistakes somewhat painlessly.
 
-To start a do-file, click on the icon that looks like a notepad on the top-left corner of your Stata viewer[[2]](https://data.library.utoronto.ca/cleaning-data-stata#_ftn2 "").
+To start a do-file, click on the icon that looks like a notepad on the top-left corner of your Stata viewer[[2]](https://data.library.utoronto.ca/cleaning-data-stata#_ftn2).
 
 ![]({{ '/assets/images/02.png' | relative_url }})
 
@@ -99,14 +100,16 @@ One of the distinguishing features of <odesi> is that when you download a datase
 [Back to top](https://data.library.utoronto.ca/cleaning-data-stata#toc)
 
 ***Creating a number of smaller subsets based on research criteria***
+{: #creating-a-number-of-smaller-subsets-based-on-research-criteria }
 
 There are many reasons why you may want a smaller subset of your data but the main one is that the bigger the dataset, the harder it is for Stata to manage, which slows down your system. Your goal is to make your dataset as small as possible, while keeping all the relevant information. Your research agenda determines what your final dataset will contain.
-
+bundle
 Let’s say you have data on the health habits of Canadians aged 12 and up, but your research question is specific to women of reproductive age living in Ontario[[8]](https://data.library.utoronto.ca/cleaning-data-stata#_ftn8 ""). You clearly don’t need to keep the men in your dataset, and you won’t need to keep the residents of provinces other than Ontario. Furthermore, you can probably drop women under 15 and over 55 years old. Now, let’s look at how you would do that.
 
 [Back to top](https://data.library.utoronto.ca/cleaning-data-stata#toc)
 
 ***Dropping observations***
+{: #dropping-observations }
 
 To drop observations, you need to combine one of two Stata commands (keep or drop) with the “if” qualifier.
 
@@ -135,6 +138,7 @@ Here is a list of operators in expressions. You would mostly use logical and rel
 [Back to top](https://data.library.utoronto.ca/cleaning-data-stata#toc)
 
 ***Dropping variables***
+{: #dropping-variables }
 
 Another way in which you may need to make your dataset smaller is by dropping variables that are not useful to your research. It may be that the information contained in a given variable is duplicated (i.e. another variable provides the same info), or maybe all the observations for a variable are missing, or a variable just happens to be in your dataset but is irrelevant to your research. Dropping variables is very straightforward; simply use the “drop” command.
 
@@ -153,6 +157,7 @@ Where *varlist* is the list of variables you would like to drop. It’s easy to 
 [Back to top](https://data.library.utoronto.ca/cleaning-data-stata#toc)
 
 ***Transforming variables***
+{: #transforming-variables }
 
 Sometimes variables are not coded the way you want them to be. In this section we will look at two transformations you may need to do on some variables before using them: recode and destring.
 
@@ -187,6 +192,7 @@ Here, we can see that our variable string is now completely identical to the var
 [Back to top](https://data.library.utoronto.ca/cleaning-data-stata#toc)
 
 ***Dealing with outliers*** 
+{: #dealing-with-outliers }
 
 Outliers deserve their own section because there is often confusion as to what exactly constitutes an outlier. An outlier is NOT an observation with an unusual but possible value for a variable[[12]](https://data.library.utoronto.ca/cleaning-data-stata#_ftn12 ""); rare events do occur. The outliers you should be concerned about are the ones that come from coding error. How do you tell which is which? Common sense goes a long way here.
 
@@ -225,6 +231,7 @@ What should you do with such an observation? There are a number of solutions but
 [Back to top](https://data.library.utoronto.ca/cleaning-data-stata#toc)
 
 ***Creating new variables***
+{: #creating-new-variables }
 
 There are two main commands you need to know to generate new variables: “gen” is for the basics, while “egen” allows you to get pretty fancy. You can combine these with qualifiers such as “if” or “in” as well as prefix such as “by” and “bysort”[[14]](https://data.library.utoronto.ca/cleaning-data-stata#_ftn14 "").
 
@@ -251,6 +258,7 @@ The second and third lines (starting with “gen”) create a binary variable wh
 [Back to top](https://data.library.utoronto.ca/cleaning-data-stata#toc)
 
 ***Moving variables***
+{: #moving-variables }
 
 Now that you have created these new variables, it would be nice to make sure that the rules by which you generated them was correct. Ideally, you would like to look at livein (the new variable based on marital status) and dhhgms (the marital status variable). However, it’s hard to compare two variables unless they are side by side. You can use the “order” command to move a variable (i.e. move a column of your dataset).
 
@@ -277,6 +285,7 @@ replace bmicat=. if hwtgbmi==.d
 [Back to top](https://data.library.utoronto.ca/cleaning-data-stata#toc)
 
 ***Labelling variables***
+{: #renaming-variables }
 
 Whenever you create a new variable, it is a good idea to label it. Why? Having your variables labeled makes it easy for you or anyone else using your dataset to quickly see what each variable represents. You should think of your work as something that people should be able to reproduce. Labeling your variables is a small task that makes it much easier for others to use your data[[15]](https://data.library.utoronto.ca/cleaning-data-stata#_ftn15 "").
 
@@ -317,6 +326,7 @@ Finally let’s look at our final datasets and make sure it contains all the rig
 [Back to top](https://data.library.utoronto.ca/cleaning-data-stata#toc)
 
 ***A few last words***
+{: #a-few-last-words }
 
 This concludes our workshop but it’s only the beginning for you. Learning to use statistical software involves a lot of trial and error, angry googling, and desperately trying to find *someone* who knows how to write a loop… Listed below are a few excellent resources to further your working knowledge of Stata:
 
@@ -348,7 +358,8 @@ Stata: <http://www.stata.com/support/faqs/>
 
 ---
 
-[[1]](https://data.library.utoronto.ca/cleaning-data-stata#_ftnref1 "") There is an assumption here that you already have a dataset. If you do not and you need assistance assembling data, please visit the data library (THIS COMMENT NEEDS TO REFERENCE THE GUIDE ON HOW TO DOWNLOAD A DATASET FROM SDA)
+[1]
+{: #1} There is an assumption here that you already have a dataset. If you do not and you need assistance assembling data, please visit the data library (THIS COMMENT NEEDS TO REFERENCE THE GUIDE ON HOW TO DOWNLOAD A DATASET FROM SDA)
 
 [[2]](https://data.library.utoronto.ca/cleaning-data-stata#_ftnref2 "") You can use other text editors to create and manage do-files. For example, Smultron is an open-source software that works well with Stata.
 
