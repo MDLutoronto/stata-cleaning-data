@@ -53,7 +53,7 @@ Whether this is your first time cleaning data or you are a seasoned “data monk
 
 *Write a do file.* Never clean a dataset by blindly entering commands (or worse, clicking buttons). You want to write the commands in a do-file, and then run it. This way, if you make a mistake, you will not have ruined your entire dataset and you will not need to start again from scratch. This is a general advice that applies to any work you do on Stata. Working from do-files lets other people see what you did if you ever need advice, it makes your work reproducible and it allows you to correct small mistakes somewhat painlessly.
 
-To start a do-file, click on the icon that looks like a notepad on the top-left corner of your Stata viewer[[2]](https://data.library.utoronto.ca/cleaning-data-stata#_ftn2).
+To start a do-file, click on the icon that looks like a notepad on the top-left corner of your Stata viewer. <sup><a href="#note-2" id="ref-2">[2]</a></sup>
 
 ![]({{ '/assets/images/02.png' | relative_url }})
 
@@ -361,7 +361,7 @@ Stata: <http://www.stata.com/support/faqs/>
 [1]
 {: #1} There is an assumption here that you already have a dataset. If you do not and you need assistance assembling data, please visit the data library (THIS COMMENT NEEDS TO REFERENCE THE GUIDE ON HOW TO DOWNLOAD A DATASET FROM SDA)
 
-[[2]](https://data.library.utoronto.ca/cleaning-data-stata#_ftnref2 "") You can use other text editors to create and manage do-files. For example, Smultron is an open-source software that works well with Stata.
+<p id="note-2"><a href="#ref-2">[2]</a> You can use other text editors to create and manage do-files. For example, Smultron is an open-source software that works well with Stata. 
 
 [[3]](https://data.library.utoronto.ca/cleaning-data-stata#_ftnref3 "") You can see the size of a data set by right-clicking on it, then selecting “properties”.
 
