@@ -97,16 +97,12 @@ One of the distinguishing features of <odesi> is that when you download a datase
 
 ![]({{ '/assets/images/08.png' | relative_url }})
 
-[Back to top](https://data.library.utoronto.ca/cleaning-data-stata#toc)
-
 ***Creating a number of smaller subsets based on research criteria***
 {: #creating-a-number-of-smaller-subsets-based-on-research-criteria }
 
 There are many reasons why you may want a smaller subset of your data but the main one is that the bigger the dataset, the harder it is for Stata to manage, which slows down your system. Your goal is to make your dataset as small as possible, while keeping all the relevant information. Your research agenda determines what your final dataset will contain.
 bundle
 Let’s say you have data on the health habits of Canadians aged 12 and up, but your research question is specific to women of reproductive age living in Ontario<sup><a href="#note-8" id="ref-8">[8]</a></sup>. You clearly don’t need to keep the men in your dataset, and you won’t need to keep the residents of provinces other than Ontario. Furthermore, you can probably drop women under 15 and over 55 years old. Now, let’s look at how you would do that.
-
-[Back to top](https://data.library.utoronto.ca/cleaning-data-stata#toc)
 
 ***Dropping observations***
 {: #dropping-observations }
@@ -135,8 +131,6 @@ Here is a list of operators in expressions. You would mostly use logical and rel
 
 ![]({{ '/assets/images/10.png' | relative_url }})
 
-[Back to top](https://data.library.utoronto.ca/cleaning-data-stata#toc)
-
 ***Dropping variables***
 {: #dropping-variables }
 
@@ -153,8 +147,6 @@ drop *varlist*
 Where *varlist* is the list of variables you would like to drop. It’s easy to drop a number of a variable at a time this way. Here I am dropping all the variables that were coded as Not Applicable for more than 95% of observations<sup><a href="#note-10" id="ref-10">[10]</a></sup>:
 
 ![]({{ '/assets/images/12.jpg' | relative_url }})
-
-[Back to top](https://data.library.utoronto.ca/cleaning-data-stata#toc)
 
 ***Transforming variables***
 {: #transforming-variables }
@@ -188,8 +180,6 @@ Here, we can see that our variable string is now completely identical to the var
 ![]({{ '/assets/images/17.png' | relative_url }})
 
 (We can drop that variable now)
-
-[Back to top](https://data.library.utoronto.ca/cleaning-data-stata#toc)
 
 ***Dealing with outliers*** 
 {: #dealing-with-outliers }
@@ -228,8 +218,6 @@ What should you do with such an observation? There are a number of solutions but
 * Use the “if” qualifier to exclude it when generating statistics that use the height variable (“*command* if hwtghtm<=1.803”)
 * Ignore it if the height variable is not actually that important in your research and the rest of the variables for this observations are coded just fine
 
-[Back to top](https://data.library.utoronto.ca/cleaning-data-stata#toc)
-
 ***Creating new variables***
 {: #creating-new-variables }
 
@@ -254,8 +242,6 @@ by DHHGAGE: egen meanbmi=mean(HWTGBMI)
 The “sort” part of the command organizes the observation according to the variable DHHGAGE, from smallest to largest, a step required before doing any action “by” the variable. It’s usually easier to just use “bysort”.
 
 The second and third lines (starting with “gen”) create a binary variable which equals 0 if an observation has a BMI lower than the average for her age group, and 1 if her BMI is above her age group average.
-
-[Back to top](https://data.library.utoronto.ca/cleaning-data-stata#toc)
 
 ***Moving variables***
 {: #moving-variables }
@@ -282,8 +268,6 @@ Do you notice the problem on line 8? The variable bmicat should not be coded 1 i
 
 replace bmicat=. if hwtgbmi==.d
 
-[Back to top](https://data.library.utoronto.ca/cleaning-data-stata#toc)
-
 ***Labelling variables***
 {: #labelling-variables }
 
@@ -300,8 +284,6 @@ In our previous example, the command would look like this:
 Note that you can abbreviate this command to lab var:
 
 ![]({{ '/assets/images/29.png' | relative_url }})
-
-[Back to top](https://data.library.utoronto.ca/cleaning-data-stata#toc)
 
 ***Renaming variables***
 {: #renaming-variables }
@@ -323,8 +305,6 @@ Let’s try running it in one go to see if it works. Do not highlight any comman
 Let’s also take the time to open our logs to see what it looks like and how it could be useful.
 
 Finally let’s look at our final datasets and make sure it contains all the right variables, in the right format.
-
-[Back to top](https://data.library.utoronto.ca/cleaning-data-stata#toc)
 
 ***A few last words***
 {: #a-few-last-words }
@@ -352,12 +332,6 @@ University of North Carolina at Chapel Hill: <http://www.cpc.unc.edu.myaccess.li
  
 
 Stata: <http://www.stata.com/support/faqs/>
-
- 
-
-[Back to top](https://data.library.utoronto.ca/cleaning-data-stata#toc)
-
-Technique: [Cleaning data](https://mdl.library.utoronto.ca/technique/cleaning-data) | Tools: [Stata](https://mdl.library.utoronto.ca/tools/stata)
 
 
 ---
@@ -391,3 +365,5 @@ Technique: [Cleaning data](https://mdl.library.utoronto.ca/technique/cleaning-da
 <p id="note-14"><a href="#ref-14">[14]</a> All of these commands, qualifiers and prefixes have Stata help files. Have a look at them for a more in-depth presentation.
 
 <p id="note-15"><a href="#ref-15">[15]</a> Knowing how to label variables can also be useful if the data was not provided to you with a dictionary file; you can then use the questionnaire to build labels for all your variables of interest, just as a dictionary file would do.
+
+Technique: [Cleaning data](https://mdl.library.utoronto.ca/technique/cleaning-data) | Tools: [Stata](https://mdl.library.utoronto.ca/tools/stata)
