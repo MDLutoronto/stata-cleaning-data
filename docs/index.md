@@ -43,7 +43,7 @@ Cleaning data is a rather broad term that applies to the preliminary manipulatio
 
 Whether this is your first time cleaning data or you are a seasoned “data monkey”, you might find some useful tips by reading more.
 
-***Some useful tips before you get started[[1]](#1)***
+***Some useful tips before you get started***<sup><a href="#note-1" id="ref-1">[1]</a></sup>
 {: #some-useful-tips-before-you-get-started }
 
 
@@ -53,7 +53,7 @@ Whether this is your first time cleaning data or you are a seasoned “data monk
 
 *Write a do file.* Never clean a dataset by blindly entering commands (or worse, clicking buttons). You want to write the commands in a do-file, and then run it. This way, if you make a mistake, you will not have ruined your entire dataset and you will not need to start again from scratch. This is a general advice that applies to any work you do on Stata. Working from do-files lets other people see what you did if you ever need advice, it makes your work reproducible and it allows you to correct small mistakes somewhat painlessly.
 
-To start a do-file, click on the icon that looks like a notepad on the top-left corner of your Stata viewer. <sup><a href="#note-2" id="ref-2">[2]</a></sup>
+To start a do-file, click on the icon that looks like a notepad on the top-left corner of your Stata viewer<sup><a href="#note-2" id="ref-2">[2]</a></sup>.
 
 ![]({{ '/assets/images/02.png' | relative_url }})
 
@@ -63,17 +63,17 @@ In the preliminary stages of your work, you may feel that a do-file is more hind
 
 As you become more proficient with programming in Stata, you won’t need to try out commands anymore, and you’ll discover the joy of writing a do-file and having it run without a glitch. To run a whole do-file, do not highlight any part of it and click on the “Execute Selection (do)” icon.
 
-You may wonder about the commands “clear”, “set more off” and “set mem 15000” in the screenshot example. These three commands are administrative commands that are quite useful to have at the beginning of a do-file. The first, “clear”, is used to clear any previous dataset you may have been working on. The command “set more off” tells Stata not to pause or display the --more-- message. Finally, the command “set mem 15000” increases the memory available to Stata from your computer; here we will need it as the size of the data set we downloaded from <odesi>[[3]](https://data.library.utoronto.ca/cleaning-data-stata#_ftn3 "") is larger than the 10mb allocated to data by default.
+You may wonder about the commands “clear”, “set more off” and “set mem 15000” in the screenshot example. These three commands are administrative commands that are quite useful to have at the beginning of a do-file. The first, “clear”, is used to clear any previous dataset you may have been working on. The command “set more off” tells Stata not to pause or display the --more-- message. Finally, the command “set mem 15000” increases the memory available to Stata from your computer; here we will need it as the size of the data set we downloaded from Odesi <sup><a href="#note-3" id="ref-3">[3]</a></sup> is larger than the 10mb allocated to data by default.
 
 One last comment about do files: if you double click a saved do file, it will not open for editing, but rather Stata will run that do-file, which can be a bit annoying… To reopen a do-file from a folder without executing the commands in it, right-click on it and select “edit” rather than “open”.
 
 *Always keep a log*. Again, this is a general rule of thumb on Stata. Keeping a log means you can go back and look at what you did without having to do it again. Starting a log is just a matter of adding a command at the top of your do-file that tells Stata to log, as well as where you want the log to be saved:
 
-log using “whateverpathyouwant:\pickanameforyourlog.smcl”[[4]](https://data.library.utoronto.ca/cleaning-data-stata#_ftn4 ""), replace[[5]](https://data.library.utoronto.ca/cleaning-data-stata#_ftn5 "")
+log using “whateverpathyouwant:\pickanameforyourlog.smcl”<sup><a href="#note-4" id="ref-4">[4]</a></sup>, replace<sup><a href="#note-5" id="ref-5">[5]</a></sup>
 
 Note how logs are saved under the smcl extension.
 
-Do not forget to close your log before starting a new one. The last command on your do-file[[6]](https://data.library.utoronto.ca/cleaning-data-stata#_ftn6 "") will usually be “log close”.
+Do not forget to close your log before starting a new one. The last command on your do-file<sup><a href="#note-6" id="ref-6">[6]</a></sup> will usually be “log close”.
 
 *Save as you go*. Computers crash, power goes out, stuff happens. Save your do-files every few minutes as you write them. Saving a do file is done the same way as saving any text editor document: either click on the diskette icon, or press “CTRL+S”:
 
@@ -83,7 +83,7 @@ You should also save your dataset as you modify it, but make sure to keep one ve
 
 ![]({{ '/assets/images/05.png' | relative_url }})
 
-Note how the extension for Stata data is “.dta”, and also note how the new dataset has a different name from the original[[7]](https://data.library.utoronto.ca/cleaning-data-stata#_ftn7 "").
+Note how the extension for Stata data is “.dta”, and also note how the new dataset has a different name from the original<sup><a href="#note-7" id="ref-7">[7]</a></sup>.
 
 *Become familiar with your dataset*. Datasets come with codebooks. You should know what each variable is, how it’s coded, how missing values are identified. A good practice is to actually look at the data, so that you understand the structure of the information. To do so, you can click on “Data” in the top-left corner of your viewer and select Data editor, then Data editor (browse). A new window will open and you can see your data.
 
@@ -104,7 +104,7 @@ One of the distinguishing features of <odesi> is that when you download a datase
 
 There are many reasons why you may want a smaller subset of your data but the main one is that the bigger the dataset, the harder it is for Stata to manage, which slows down your system. Your goal is to make your dataset as small as possible, while keeping all the relevant information. Your research agenda determines what your final dataset will contain.
 bundle
-Let’s say you have data on the health habits of Canadians aged 12 and up, but your research question is specific to women of reproductive age living in Ontario[[8]](https://data.library.utoronto.ca/cleaning-data-stata#_ftn8 ""). You clearly don’t need to keep the men in your dataset, and you won’t need to keep the residents of provinces other than Ontario. Furthermore, you can probably drop women under 15 and over 55 years old. Now, let’s look at how you would do that.
+Let’s say you have data on the health habits of Canadians aged 12 and up, but your research question is specific to women of reproductive age living in Ontario<sup><a href="#note-8" id="ref-8">[8]</a></sup>. You clearly don’t need to keep the men in your dataset, and you won’t need to keep the residents of provinces other than Ontario. Furthermore, you can probably drop women under 15 and over 55 years old. Now, let’s look at how you would do that.
 
 [Back to top](https://data.library.utoronto.ca/cleaning-data-stata#toc)
 
@@ -123,7 +123,7 @@ The “if” qualifier restricts the scope of the command to those observations 
 
 *command* if *exp*
 
-Where *command* in this case would be, drop and *exp* is the expression that needs to be true for the “drop” command to apply[[9]](https://data.library.utoronto.ca/cleaning-data-stata#_ftn9 "").
+Where *command* in this case would be, drop and *exp* is the expression that needs to be true for the “drop” command to apply<sup><a href="#note-9" id="ref-9">[9]</a></sup>.
 
 ![]({{ '/assets/images/09.png' | relative_url }})
 
@@ -150,7 +150,7 @@ Clearly we will not learn anything from that variable, so we can drop it. The sy
 
 drop *varlist*
 
-Where *varlist* is the list of variables you would like to drop. It’s easy to drop a number of a variable at a time this way. Here I am dropping all the variables that were coded as Not Applicable for more than 95% of observations[[10]](https://data.library.utoronto.ca/cleaning-data-stata#_ftn10 ""):
+Where *varlist* is the list of variables you would like to drop. It’s easy to drop a number of a variable at a time this way. Here I am dropping all the variables that were coded as Not Applicable for more than 95% of observations<sup><a href="#note-10" id="ref-10">[10]</a></sup>:
 
 ![]({{ '/assets/images/12.jpg' | relative_url }})
 
@@ -163,7 +163,7 @@ Sometimes variables are not coded the way you want them to be. In this section w
 
 The “recode” command changes the values of numeric variables according to the rules specified. In the CCHS dataset, many variables have missing values coded as “.a” or “.d”. This is convenient because it will not affect calculations you might do using the data (for example if you calculate an average). However, many datasets use 999 as a missing variable code, and that might be problematic. We might want to recode these as “.” in order to not have them affect any calculations we plan on doing with the data. The syntax for this command is:
 
-recode *varlist* (old value(s)=new value)[[11]](https://data.library.utoronto.ca/cleaning-data-stata#_ftn11 "")
+recode *varlist* (old value(s)=new value)<sup><a href="#note-11" id="ref-11">[11]</a></sup>
 
 Let’s recode the height and BMI variables from the CCHS data, (for the sake of illustration, since it’s really not necessary in this case):
 
@@ -194,11 +194,11 @@ Here, we can see that our variable string is now completely identical to the var
 ***Dealing with outliers*** 
 {: #dealing-with-outliers }
 
-Outliers deserve their own section because there is often confusion as to what exactly constitutes an outlier. An outlier is NOT an observation with an unusual but possible value for a variable[[12]](https://data.library.utoronto.ca/cleaning-data-stata#_ftn12 ""); rare events do occur. The outliers you should be concerned about are the ones that come from coding error. How do you tell which is which? Common sense goes a long way here.
+Outliers deserve their own section because there is often confusion as to what exactly constitutes an outlier. An outlier is NOT an observation with an unusual but possible value for a variable<sup><a href="#note-12" id="ref-12">[12]</a></sup>; rare events do occur. The outliers you should be concerned about are the ones that come from coding error. How do you tell which is which? Common sense goes a long way here.
 
 First, look at your data using the data editor (browse). Outliers tend to jump at you. If you have a small dataset, you can also tabulate each of your variables:
 
-tab *varlist*[[13]](https://data.library.utoronto.ca/cleaning-data-stata#_ftn13 "")
+tab *varlist*<sup><a href="#note-13" id="ref-13">[13]</a></sup>
 
 Tabulating a variable will give you a list of all the possible values that variable takes in the dataset. Outliers will be the extreme values. Look at the order of magnitude. Are these values believable?
 
@@ -233,7 +233,7 @@ What should you do with such an observation? There are a number of solutions but
 ***Creating new variables***
 {: #creating-new-variables }
 
-There are two main commands you need to know to generate new variables: “gen” is for the basics, while “egen” allows you to get pretty fancy. You can combine these with qualifiers such as “if” or “in” as well as prefix such as “by” and “bysort”[[14]](https://data.library.utoronto.ca/cleaning-data-stata#_ftn14 "").
+There are two main commands you need to know to generate new variables: “gen” is for the basics, while “egen” allows you to get pretty fancy. You can combine these with qualifiers such as “if” or “in” as well as prefix such as “by” and “bysort”<sup><a href="#note-14" id="ref-14">[14]</a></sup>.
 
 For example, say you want to create a variable that tells you whether the women in the dataset have a live-in partner. While there is no sure-fire way to establish that, we will approximate it by assuming that women who indicated their marital status as married or common-law actually live with their spouse or common-law partner:
 
@@ -285,9 +285,9 @@ replace bmicat=. if hwtgbmi==.d
 [Back to top](https://data.library.utoronto.ca/cleaning-data-stata#toc)
 
 ***Labelling variables***
-{: #renaming-variables }
+{: #labelling-variables }
 
-Whenever you create a new variable, it is a good idea to label it. Why? Having your variables labeled makes it easy for you or anyone else using your dataset to quickly see what each variable represents. You should think of your work as something that people should be able to reproduce. Labeling your variables is a small task that makes it much easier for others to use your data[[15]](https://data.library.utoronto.ca/cleaning-data-stata#_ftn15 "").
+Whenever you create a new variable, it is a good idea to label it. Why? Having your variables labeled makes it easy for you or anyone else using your dataset to quickly see what each variable represents. You should think of your work as something that people should be able to reproduce. Labeling your variables is a small task that makes it much easier for others to use your data<sup><a href="#note-15" id="ref-15">[15]</a></sup>.
 
 The syntax for labeling variables is as follow:
 
@@ -304,6 +304,7 @@ Note that you can abbreviate this command to lab var:
 [Back to top](https://data.library.utoronto.ca/cleaning-data-stata#toc)
 
 ***Renaming variables***
+{: #renaming-variables }
 
 You may find that you work faster if your variables have names that you recognize at first glance. In most cases this is by no means a necessary task in cleaning data, but if you use data from another country, for example, you may find that the variable names are in a foreign language, making it very hard to remember. The syntax is as easy as can be:
 
@@ -356,39 +357,37 @@ Stata: <http://www.stata.com/support/faqs/>
 
 [Back to top](https://data.library.utoronto.ca/cleaning-data-stata#toc)
 
+Technique: [Cleaning data](https://mdl.library.utoronto.ca/technique/cleaning-data) | Tools: [Stata](https://mdl.library.utoronto.ca/tools/stata)
+
+
 ---
 
-[1]
-{: #1} There is an assumption here that you already have a dataset. If you do not and you need assistance assembling data, please visit the data library (THIS COMMENT NEEDS TO REFERENCE THE GUIDE ON HOW TO DOWNLOAD A DATASET FROM SDA)
+<p id="note-1"><a href="#ref-1">[1]</a> There is an assumption here that you already have a dataset. If you do not and you need assistance assembling data, please visit the data library (THIS COMMENT NEEDS TO REFERENCE THE GUIDE ON HOW TO DOWNLOAD A DATASET FROM SDA)
 
 <p id="note-2"><a href="#ref-2">[2]</a> You can use other text editors to create and manage do-files. For example, Smultron is an open-source software that works well with Stata. 
 
-[[3]](https://data.library.utoronto.ca/cleaning-data-stata#_ftnref3 "") You can see the size of a data set by right-clicking on it, then selecting “properties”.
+<p id="note-3"><a href="#ref-3">[3]</a> You can see the size of a data set by right-clicking on it, then selecting “properties”.
 
-[[4]](https://data.library.utoronto.ca/cleaning-data-stata#_ftnref4 "") You should create a folder in an easy to remember location (desktop works well) for your Stata work. Then check its properties by right-clicking on it, and copy the location. That’s your path.
+<p id="note-4"><a href="#ref-4">[4]</a> You should create a folder in an easy to remember location (desktop works well) for your Stata work. Then check its properties by right-clicking on it, and copy the location. That’s your path.
 
-[[5]](https://data.library.utoronto.ca/cleaning-data-stata#_ftnref5 "") “,replace” is optional here but rather useful if you want to keep just one log per do-file. If you don’t have the “,replace” command, you will need to modify the name of the log every time you run the do-file.
+<p id="note-5"><a href="#ref-5">[5]</a> “,replace” is optional here but rather useful if you want to keep just one log per do-file. If you don’t have the “,replace” command, you will need to modify the name of the log every time you run the do-file.
 
-[[6]](https://data.library.utoronto.ca/cleaning-data-stata#_ftnref6 "") However, if a do-file is interrupted because of an error and a log is open, you will need to close it before running the same do-file again, because one of the first command of the do file is to start a log, which will result in an error message unless the previous log is closed. Simply type the command “log close” in the command window, or highlight it and execute from your do-file.
+<p id="note-6"><a href="#ref-6">[6]</a> However, if a do-file is interrupted because of an error and a log is open, you will need to close it before running the same do-file again, because one of the first command of the do file is to start a log, which will result in an error message unless the previous log is closed. Simply type the command “log close” in the command window, or highlight it and execute from your do-file.
 
-[[7]](https://data.library.utoronto.ca/cleaning-data-stata#_ftnref7 "") Note to users of this guide: this command would typically be located towards the end of the do-file. I have created a screenshot here with a new do-file only to show one command alone. All the examples in this guide that similarly use a new do file with only one command were done that way to save space. The goal of this workshop is to learn to create a cleaning do file, in which commands are listed one after the other. I trust that users can understand the commands well enough by the end of the workshop to assemble them in the order that is logical for the purpose of their own task.
+<p id="note-7"><a href="#ref-7">[7]</a> Note to users of this guide: this command would typically be located towards the end of the do-file. I have created a screenshot here with a new do-file only to show one command alone. All the examples in this guide that similarly use a new do file with only one command were done that way to save space. The goal of this workshop is to learn to create a cleaning do file, in which commands are listed one after the other. I trust that users can understand the commands well enough by the end of the workshop to assemble them in the order that is logical for the purpose of their own task.
 
-[[8]](https://data.library.utoronto.ca/cleaning-data-stata#_ftnref8 "") The examples in this guide were created using a customized subset of the Canadian community health survey (CCHS), annual component, 2007-2008, available through the Data Liberation Initiative (DLI) and downloaded using [SDA@CHASS](mailto:SDA@CHASS).
+<p id="note-8"><a href="#ref-8">[8]</a> The examples in this guide were created using a customized subset of the Canadian community health survey (CCHS), annual component, 2007-2008, available through the Data Liberation Initiative (DLI) and downloaded using [SDA@CHASS](mailto:SDA@CHASS).
 
-[[9]](https://data.library.utoronto.ca/cleaning-data-stata#_ftnref9 "") See the Stata help files on expressions and operators: type “help exp” and “help operator” in the command screen.
+<p id="note-9"><a href="#ref-9">[9]</a> See the Stata help files on expressions and operators: type “help exp” and “help operator” in the command screen.
 
-[[10]](https://data.library.utoronto.ca/cleaning-data-stata#_ftnref10 "") There is no rule of thumb at play here; I simply picked a list of variables that contained little useful information. Sometimes, the fact that only a small number of observations contain information IS informative, in and of itself. Do not drop variables that tell you something important.
+<p id="note-10"><a href="#ref-10">[10]</a> There is no rule of thumb at play here; I simply picked a list of variables that contained little useful information. Sometimes, the fact that only a small number of observations contain information IS informative, in and of itself. Do not drop variables that tell you something important.
 
-[[11]](https://data.library.utoronto.ca/cleaning-data-stata#_ftnref11 "") Note that you can also use this command to make groups. The CCHS dataset already has age by age group but if you had a variable for actual age, you could generate an age group variable using recode. See the Stata help sheet (help recode) for more options.
+<p id="note-11"><a href="#ref-11">[11]</a> Note that you can also use this command to make groups. The CCHS dataset already has age by age group but if you had a variable for actual age, you could generate an age group variable using recode. See the Stata help sheet (help recode) for more options.
 
-[[12]](https://data.library.utoronto.ca/cleaning-data-stata#_ftnref12 "") Admittedly, these are indeed outliers, just not the type we want to do anything about. Leave those alone. “Dealing” with true events in any way is likely to do more harm than good as you would truncate your dataset, potentially creating bias in your analysis later.
+<p id="note-12"><a href="#ref-12">[12]</a> Admittedly, these are indeed outliers, just not the type we want to do anything about. Leave those alone. “Dealing” with true events in any way is likely to do more harm than good as you would truncate your dataset, potentially creating bias in your analysis later.
 
-[[13]](https://data.library.utoronto.ca/cleaning-data-stata#_ftnref13 "") You replace “*varlist*” with the list of the variables you want tabulated, as in the drop example.
+<p id="note-13"><a href="#ref-13">[13]</a> You replace “*varlist*” with the list of the variables you want tabulated, as in the drop example.
 
-[[14]](https://data.library.utoronto.ca/cleaning-data-stata#_ftnref14 "") All of these commands, qualifiers and prefixes have Stata help files. Have a look at them for a more in-depth presentation.
+<p id="note-14"><a href="#ref-14">[14]</a> All of these commands, qualifiers and prefixes have Stata help files. Have a look at them for a more in-depth presentation.
 
-[[15]](https://data.library.utoronto.ca/cleaning-data-stata#_ftnref15 "") Knowing how to label variables can also be useful if the data was not provided to you with a dictionary file; you can then use the questionnaire to build labels for all your variables of interest, just as a dictionary file would do.
-
-[Back to top](https://data.library.utoronto.ca/cleaning-data-stata#toc)
-
-Technique: [Cleaning data](/technique/cleaning-data) | Tools: [Stata](/tools/stata)
+<p id="note-15"><a href="#ref-15">[15]</a> Knowing how to label variables can also be useful if the data was not provided to you with a dictionary file; you can then use the questionnaire to build labels for all your variables of interest, just as a dictionary file would do.
