@@ -3,6 +3,9 @@ title: "Cleaning data in STATA"
 layout: "home"
 description: "Stata is a good tool for cleaning and manipulating data, regardless of the software you intend to use for analysis. This workshop is suitable for both first time data-cleaners and for those familiar with data cleaning."
 created_date: 2017-05-05
+maintainer: 
+    - name: Nadia Muhe
+      link: https://library.utoronto.ca/staff/nadia-muhe
 permalink: "/"  #! Remove this if not the homepage
 ---
 
@@ -43,7 +46,7 @@ Cleaning data is a rather broad term that applies to the preliminary manipulatio
 
 Whether this is your first time cleaning data or you are a seasoned “data monkey”, you might find some useful tips by reading more.
 
-***Some useful tips before you get started***<sup><a href="#note-1" id="ref-1">[1]</a></sup>
+***Some useful tips before you get started*** <sup><a href="#note-1" id="ref-1">[1]</a></sup>
 {: #some-useful-tips-before-you-get-started }
 
 
@@ -53,7 +56,7 @@ Whether this is your first time cleaning data or you are a seasoned “data monk
 
 *Write a do file.* Never clean a dataset by blindly entering commands (or worse, clicking buttons). You want to write the commands in a do-file, and then run it. This way, if you make a mistake, you will not have ruined your entire dataset and you will not need to start again from scratch. This is a general advice that applies to any work you do on Stata. Working from do-files lets other people see what you did if you ever need advice, it makes your work reproducible and it allows you to correct small mistakes somewhat painlessly.
 
-To start a do-file, click on the icon that looks like a notepad on the top-left corner of your Stata viewer<sup><a href="#note-2" id="ref-2">[2]</a></sup>.
+To start a do-file, click on the icon that looks like a notepad on the top-left corner of your Stata viewer <sup><a href="#note-2" id="ref-2">[2]</a></sup>.
 
 ![]({{ '/assets/images/02.png' | relative_url }})
 
@@ -69,11 +72,11 @@ One last comment about do files: if you double click a saved do file, it will no
 
 *Always keep a log*. Again, this is a general rule of thumb on Stata. Keeping a log means you can go back and look at what you did without having to do it again. Starting a log is just a matter of adding a command at the top of your do-file that tells Stata to log, as well as where you want the log to be saved:
 
-log using “whateverpathyouwant:\pickanameforyourlog.smcl”<sup><a href="#note-4" id="ref-4">[4]</a></sup>, replace<sup><a href="#note-5" id="ref-5">[5]</a></sup>
+log using “whateverpathyouwant:\pickanameforyourlog.smcl” <sup><a href="#note-4" id="ref-4">[4]</a></sup>, replace <sup><a href="#note-5" id="ref-5">[5]</a></sup>
 
 Note how logs are saved under the smcl extension.
 
-Do not forget to close your log before starting a new one. The last command on your do-file<sup><a href="#note-6" id="ref-6">[6]</a></sup> will usually be “log close”.
+Do not forget to close your log before starting a new one. The last command on your do-file <sup><a href="#note-6" id="ref-6">[6]</a></sup> will usually be “log close”.
 
 *Save as you go*. Computers crash, power goes out, stuff happens. Save your do-files every few minutes as you write them. Saving a do file is done the same way as saving any text editor document: either click on the diskette icon, or press “CTRL+S”:
 
@@ -83,7 +86,7 @@ You should also save your dataset as you modify it, but make sure to keep one ve
 
 ![]({{ '/assets/images/05.png' | relative_url }})
 
-Note how the extension for Stata data is “.dta”, and also note how the new dataset has a different name from the original<sup><a href="#note-7" id="ref-7">[7]</a></sup>.
+Note how the extension for Stata data is “.dta”, and also note how the new dataset has a different name from the original <sup><a href="#note-7" id="ref-7">[7]</a></sup>.
 
 *Become familiar with your dataset*. Datasets come with codebooks. You should know what each variable is, how it’s coded, how missing values are identified. A good practice is to actually look at the data, so that you understand the structure of the information. To do so, you can click on “Data” in the top-left corner of your viewer and select Data editor, then Data editor (browse). A new window will open and you can see your data.
 
@@ -102,7 +105,7 @@ One of the distinguishing features of <odesi> is that when you download a datase
 
 There are many reasons why you may want a smaller subset of your data but the main one is that the bigger the dataset, the harder it is for Stata to manage, which slows down your system. Your goal is to make your dataset as small as possible, while keeping all the relevant information. Your research agenda determines what your final dataset will contain.
 bundle
-Let’s say you have data on the health habits of Canadians aged 12 and up, but your research question is specific to women of reproductive age living in Ontario<sup><a href="#note-8" id="ref-8">[8]</a></sup>. You clearly don’t need to keep the men in your dataset, and you won’t need to keep the residents of provinces other than Ontario. Furthermore, you can probably drop women under 15 and over 55 years old. Now, let’s look at how you would do that.
+Let’s say you have data on the health habits of Canadians aged 12 and up, but your research question is specific to women of reproductive age living in Ontario <sup><a href="#note-8" id="ref-8">[8]</a></sup>. You clearly don’t need to keep the men in your dataset, and you won’t need to keep the residents of provinces other than Ontario. Furthermore, you can probably drop women under 15 and over 55 years old. Now, let’s look at how you would do that.
 
 ***Dropping observations***
 {: #dropping-observations }
@@ -119,7 +122,7 @@ The “if” qualifier restricts the scope of the command to those observations 
 
 *command* if *exp*
 
-Where *command* in this case would be, drop and *exp* is the expression that needs to be true for the “drop” command to apply<sup><a href="#note-9" id="ref-9">[9]</a></sup>.
+Where *command* in this case would be, drop and *exp* is the expression that needs to be true for the “drop” command to apply <sup><a href="#note-9" id="ref-9">[9]</a></sup>.
 
 ![]({{ '/assets/images/09.png' | relative_url }})
 
@@ -144,7 +147,7 @@ Clearly we will not learn anything from that variable, so we can drop it. The sy
 
 drop *varlist*
 
-Where *varlist* is the list of variables you would like to drop. It’s easy to drop a number of a variable at a time this way. Here I am dropping all the variables that were coded as Not Applicable for more than 95% of observations<sup><a href="#note-10" id="ref-10">[10]</a></sup>:
+Where *varlist* is the list of variables you would like to drop. It’s easy to drop a number of a variable at a time this way. Here I am dropping all the variables that were coded as Not Applicable for more than 95% of observations <sup><a href="#note-10" id="ref-10">[10]</a></sup>:
 
 ![]({{ '/assets/images/12.jpg' | relative_url }})
 
@@ -155,7 +158,7 @@ Sometimes variables are not coded the way you want them to be. In this section w
 
 The “recode” command changes the values of numeric variables according to the rules specified. In the CCHS dataset, many variables have missing values coded as “.a” or “.d”. This is convenient because it will not affect calculations you might do using the data (for example if you calculate an average). However, many datasets use 999 as a missing variable code, and that might be problematic. We might want to recode these as “.” in order to not have them affect any calculations we plan on doing with the data. The syntax for this command is:
 
-recode *varlist* (old value(s)=new value)<sup><a href="#note-11" id="ref-11">[11]</a></sup>
+recode *varlist* (old value(s)=new value) <sup><a href="#note-11" id="ref-11">[11]</a></sup>
 
 Let’s recode the height and BMI variables from the CCHS data, (for the sake of illustration, since it’s really not necessary in this case):
 
@@ -184,11 +187,11 @@ Here, we can see that our variable string is now completely identical to the var
 ***Dealing with outliers*** 
 {: #dealing-with-outliers }
 
-Outliers deserve their own section because there is often confusion as to what exactly constitutes an outlier. An outlier is NOT an observation with an unusual but possible value for a variable<sup><a href="#note-12" id="ref-12">[12]</a></sup>; rare events do occur. The outliers you should be concerned about are the ones that come from coding error. How do you tell which is which? Common sense goes a long way here.
+Outliers deserve their own section because there is often confusion as to what exactly constitutes an outlier. An outlier is NOT an observation with an unusual but possible value for a variable <sup><a href="#note-12" id="ref-12">[12]</a></sup>; rare events do occur. The outliers you should be concerned about are the ones that come from coding error. How do you tell which is which? Common sense goes a long way here.
 
 First, look at your data using the data editor (browse). Outliers tend to jump at you. If you have a small dataset, you can also tabulate each of your variables:
 
-tab *varlist*<sup><a href="#note-13" id="ref-13">[13]</a></sup>
+tab *varlist* <sup><a href="#note-13" id="ref-13">[13]</a></sup>
 
 Tabulating a variable will give you a list of all the possible values that variable takes in the dataset. Outliers will be the extreme values. Look at the order of magnitude. Are these values believable?
 
@@ -221,7 +224,7 @@ What should you do with such an observation? There are a number of solutions but
 ***Creating new variables***
 {: #creating-new-variables }
 
-There are two main commands you need to know to generate new variables: “gen” is for the basics, while “egen” allows you to get pretty fancy. You can combine these with qualifiers such as “if” or “in” as well as prefix such as “by” and “bysort”<sup><a href="#note-14" id="ref-14">[14]</a></sup>.
+There are two main commands you need to know to generate new variables: “gen” is for the basics, while “egen” allows you to get pretty fancy. You can combine these with qualifiers such as “if” or “in” as well as prefix such as “by” and “bysort” <sup><a href="#note-14" id="ref-14">[14]</a></sup>.
 
 For example, say you want to create a variable that tells you whether the women in the dataset have a live-in partner. While there is no sure-fire way to establish that, we will approximate it by assuming that women who indicated their marital status as married or common-law actually live with their spouse or common-law partner:
 
@@ -271,7 +274,7 @@ replace bmicat=. if hwtgbmi==.d
 ***Labelling variables***
 {: #labelling-variables }
 
-Whenever you create a new variable, it is a good idea to label it. Why? Having your variables labeled makes it easy for you or anyone else using your dataset to quickly see what each variable represents. You should think of your work as something that people should be able to reproduce. Labeling your variables is a small task that makes it much easier for others to use your data<sup><a href="#note-15" id="ref-15">[15]</a></sup>.
+Whenever you create a new variable, it is a good idea to label it. Why? Having your variables labeled makes it easy for you or anyone else using your dataset to quickly see what each variable represents. You should think of your work as something that people should be able to reproduce. Labeling your variables is a small task that makes it much easier for others to use your data <sup><a href="#note-15" id="ref-15">[15]</a></sup>.
 
 The syntax for labeling variables is as follow:
 
@@ -313,21 +316,19 @@ This concludes our workshop but it’s only the beginning for you. Learning to u
 
 UCLA: <http://www.ats.ucla.edu.myaccess.library.utoronto.ca/stat/stata/default.htm>
 
- 
+Princeton: <https://researchdata.princeton.edu/>
 
-Princeton: <http://data.princeton.edu.myaccess.library.utoronto.ca/stata/default.html>
-
-[http://www.princeton.edu.myaccess.library.utoronto.ca/~otorres/Stata/statnotes](http://www.princeton.edu.myaccess.library.utoronto.ca/%7Eotorres/Stata/statnotes)
+[http://www.princeton.edu.myaccess.library.utoronto.ca/~otorres/Stata/statnotes](https://www.princeton.edu/~otorres/Stata/statnotes)
 
  
 
-LSE: <http://personal.lse.ac.uk.myaccess.library.utoronto.ca/lembcke/ecStata/2009/MResStataNotesJan2009PartA.pdf>
+LSE: <https://personal.lse.ac.uk/lembcke/ecStata/2009/MResStataNotesJan2009PartA.pdf>
 
-<http://personal.lse.ac.uk.myaccess.library.utoronto.ca/lembcke/ecStata/2009/MResStataNotesFeb2009PartB.pdf>
+<https://personal.lse.ac.uk/lembcke/ecStata/2009/MResStataNotesFeb2009PartB.pdf>
 
  
 
-University of North Carolina at Chapel Hill: <http://www.cpc.unc.edu.myaccess.library.utoronto.ca/research/tools/data_analysis/statatutorial>
+University of North Carolina at Chapel Hill: <https://www.cpc.unc.edu/resources/tools/>
 
  
 
