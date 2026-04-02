@@ -334,7 +334,6 @@ University of North Carolina at Chapel Hill: <https://www.cpc.unc.edu/resources/
 
 Stata: <http://www.stata.com/support/faqs/>
 
-
 ---
 
 <p id="note-1"><a href="#ref-1">[1]</a> There is an assumption here that you already have a dataset. If you do not and you need assistance assembling data, please visit the data library (THIS COMMENT NEEDS TO REFERENCE THE GUIDE ON HOW TO DOWNLOAD A DATASET FROM SDA)
@@ -365,6 +364,8 @@ Stata: <http://www.stata.com/support/faqs/>
 
 <p id="note-14"><a href="#ref-14">[14]</a> All of these commands, qualifiers and prefixes have Stata help files. Have a look at them for a more in-depth presentation.
 
-<p id="note-15"><a href="#ref-15">[15]</a> Knowing how to label variables can also be useful if the data was not provided to you with a dictionary file; you can then use the questionnaire to build labels for all your variables of interest, just as a dictionary file would do.
+<p id="note-15"><a href="#ref-15">[15]</a> Knowing how to label variables can also be useful if the data was not provided to you with a dictionary file; you can then use the questionnaire to build labels for all your variables of interest, just as a dictionary file would do.  
+</p>
 
-Technique: [Cleaning data](https://mdl.library.utoronto.ca/technique/cleaning-data) | Tools: [Stata](https://mdl.library.utoronto.ca/tools/stata)
+
+Technique: <a href="https://mdl.library.utoronto.ca/technique/cleaning-data">Cleaning data</a> | Tools: <a href="https://mdl.library.utoronto.ca/tools/stata">Stata</a>
