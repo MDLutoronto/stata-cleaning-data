@@ -1,6 +1,10 @@
 ---
 title: Dealing with outliers
 parent: Cleaning data in STATA
+created_date: 2017-05-05
+maintainer: 
+    - name: Nadia Muhe
+      link: https://library.utoronto.ca/staff/nadia-muhe
 nav_order: 6
 layout: default
 ---
@@ -45,3 +49,5 @@ What should you do with such an observation? There are a number of solutions but
 <p id="note-12"><a href="#ref-12">[12]</a> Admittedly, these are indeed outliers, just not the type we want to do anything about. Leave those alone. “Dealing” with true events in any way is likely to do more harm than good as you would truncate your dataset, potentially creating bias in your analysis later.
 
 <p id="note-13"><a href="#ref-13">[13]</a> You replace “*varlist*” with the list of the variables you want tabulated, as in the drop example.
+
+<p><strong>Technique:</strong> <a href="https://mdlutoronto.github.io/tutorials-search/?technique=Cleaning+data">Cleaning data</a> | <strong>Tools:</strong> <a href="https://mdlutoronto.github.io/tutorials-search/?tool=Stata">Stata</a></p>

@@ -1,6 +1,10 @@
 ---
 title: Creating a number of smaller subsets based on research criteria
 parent: Cleaning data in STATA
+created_date: 2017-05-05
+maintainer: 
+    - name: Nadia Muhe
+      link: https://library.utoronto.ca/staff/nadia-muhe
 nav_order: 2
 layout: default
 ---
@@ -13,3 +17,5 @@ Let’s say you have data on the health habits of Canadians aged 12 and up, but 
 
 ---
 <p id="note-8"><a href="#ref-8">[8]</a> The examples in this guide were created using a customized subset of the Canadian community health survey (CCHS), annual component, 2007-2008, available through the Data Liberation Initiative (DLI) and downloaded using [SDA@CHASS](mailto:SDA@CHASS).
+
+<p><strong>Technique:</strong> <a href="https://mdlutoronto.github.io/tutorials-search/?technique=Cleaning+data">Cleaning data</a> | <strong>Tools:</strong> <a href="https://mdlutoronto.github.io/tutorials-search/?tool=Stata">Stata</a></p>

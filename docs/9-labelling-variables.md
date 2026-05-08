@@ -1,6 +1,10 @@
 ---
 title: Labelling variables
 parent: Cleaning data in STATA
+created_date: 2017-05-05
+maintainer: 
+    - name: Nadia Muhe
+      link: https://library.utoronto.ca/staff/nadia-muhe
 nav_order: 9
 layout: default
 ---
@@ -24,3 +28,5 @@ Note that you can abbreviate this command to lab var:
 ---
 <p id="note-15"><a href="#ref-15">[15]</a> Knowing how to label variables can also be useful if the data was not provided to you with a dictionary file; you can then use the questionnaire to build labels for all your variables of interest, just as a dictionary file would do.  
 </p>
+
+<p><strong>Technique:</strong> <a href="https://mdlutoronto.github.io/tutorials-search/?technique=Cleaning+data">Cleaning data</a> | <strong>Tools:</strong> <a href="https://mdlutoronto.github.io/tutorials-search/?tool=Stata">Stata</a></p>

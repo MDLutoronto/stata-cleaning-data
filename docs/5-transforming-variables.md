@@ -1,6 +1,10 @@
 ---
 title: Transforming variables
 parent: Cleaning data in STATA
+created_date: 2017-05-05
+maintainer: 
+    - name: Nadia Muhe
+      link: https://library.utoronto.ca/staff/nadia-muhe
 nav_order: 5
 layout: default
 ---
@@ -39,3 +43,5 @@ Here, we can see that our variable string is now completely identical to the var
 
 ---
 <p id="note-11"><a href="#ref-11">[11]</a> Note that you can also use this command to make groups. The CCHS dataset already has age by age group but if you had a variable for actual age, you could generate an age group variable using recode. See the Stata help sheet (help recode) for more options.
+
+<p><strong>Technique:</strong> <a href="https://mdlutoronto.github.io/tutorials-search/?technique=Cleaning+data">Cleaning data</a> | <strong>Tools:</strong> <a href="https://mdlutoronto.github.io/tutorials-search/?tool=Stata">Stata</a></p>

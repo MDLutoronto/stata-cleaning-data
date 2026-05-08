@@ -9,6 +9,7 @@ maintainer:
 permalink: "/"  #! Remove this if not the homepage
 nav_order: 0
 has_children: true
+has_toc: false
 ---
 
 # Cleaning data in STATA
@@ -33,4 +34,4 @@ Cleaning data is a rather broad term that applies to the preliminary manipulatio
 Whether this is your first time cleaning data or you are a seasoned “data monkey”, you might find some useful tips by reading more.
 
 
-Technique: [Cleaning data](https://mdlutoronto.github.io/tutorials-search/?technique=Cleaning+data) | Tools: [Stata](https://mdlutoronto.github.io/tutorials-search/?tool=Stata)
+**Technique:** [Cleaning data](https://mdlutoronto.github.io/tutorials-search/?technique=Cleaning+data) \| **Tools:** [Stata](https://mdlutoronto.github.io/tutorials-search/?tool=Stata)
