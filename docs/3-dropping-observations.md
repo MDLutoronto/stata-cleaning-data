@@ -1,6 +1,10 @@
 ---
 title: Dropping observations
 parent: Cleaning data in STATA
+created_date: 2017-05-05
+maintainer: 
+    - name: Nadia Muhe
+      link: https://library.utoronto.ca/staff/nadia-muhe
 nav_order: 3
 layout: default
 ---
@@ -33,3 +37,5 @@ Here is a list of operators in expressions. You would mostly use logical and rel
 
 ---
 <p id="note-9"><a href="#ref-9">[9]</a> See the Stata help files on expressions and operators: type “help exp” and “help operator” in the command screen.
+
+<p><strong>Technique:</strong> <a href="https://mdlutoronto.github.io/tutorials-search/?technique=Cleaning+data">Cleaning data</a> | <strong>Tools:</strong> <a href="https://mdlutoronto.github.io/tutorials-search/?tool=Stata">Stata</a></p>

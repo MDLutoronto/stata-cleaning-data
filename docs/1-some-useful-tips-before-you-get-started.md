@@ -1,6 +1,10 @@
 ---
 title: Some useful tips before you get started
 parent: Cleaning data in STATA
+created_date: 2017-05-05
+maintainer: 
+    - name: Nadia Muhe
+      link: https://library.utoronto.ca/staff/nadia-muhe
 nav_order: 1
 layout: default
 ---
@@ -74,3 +78,6 @@ One of the distinguishing features of <odesi> is that when you download a datase
 <p id="note-6"><a href="#ref-6">[6]</a> However, if a do-file is interrupted because of an error and a log is open, you will need to close it before running the same do-file again, because one of the first command of the do file is to start a log, which will result in an error message unless the previous log is closed. Simply type the command “log close” in the command window, or highlight it and execute from your do-file.
 
 <p id="note-7"><a href="#ref-7">[7]</a> Note to users of this guide: this command would typically be located towards the end of the do-file. I have created a screenshot here with a new do-file only to show one command alone. All the examples in this guide that similarly use a new do file with only one command were done that way to save space. The goal of this workshop is to learn to create a cleaning do file, in which commands are listed one after the other. I trust that users can understand the commands well enough by the end of the workshop to assemble them in the order that is logical for the purpose of their own task.
+
+
+<p><strong>Technique:</strong> <a href="https://mdlutoronto.github.io/tutorials-search/?technique=Cleaning+data">Cleaning data</a> | <strong>Tools:</strong> <a href="https://mdlutoronto.github.io/tutorials-search/?tool=Stata">Stata</a></p>

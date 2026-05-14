@@ -1,6 +1,10 @@
 ---
 title: Renaming variables
 parent: Cleaning data in STATA
+created_date: 2017-05-05
+maintainer: 
+    - name: Nadia Muhe
+      link: https://library.utoronto.ca/staff/nadia-muhe
 nav_order: 10
 layout: default
 ---
@@ -24,3 +28,5 @@ Let’s try running it in one go to see if it works. Do not highlight any comman
 Let’s also take the time to open our logs to see what it looks like and how it could be useful.
 
 Finally let’s look at our final datasets and make sure it contains all the right variables, in the right format.
+
+<p><strong>Technique:</strong> <a href="https://mdlutoronto.github.io/tutorials-search/?technique=Cleaning+data">Cleaning data</a> | <strong>Tools:</strong> <a href="https://mdlutoronto.github.io/tutorials-search/?tool=Stata">Stata</a></p>
